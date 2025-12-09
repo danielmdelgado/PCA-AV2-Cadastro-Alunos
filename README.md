@@ -1,13 +1,15 @@
 # Cadastro de Alunos – Trabalho AV2 de PCA
 
 **Descrição breve:**\
-Sistema em Python para cadastrar, pesquisar, editar e remover alunos, gravando tudo em CSV usando pandas.
+Um projeto que consiste em um sistema em Python que cadastra, pesquisa, edita e remove alunos, gravando tudo em um arquivo CSV utilizando pandas para a manipulação dos cadastros e informações.
 
-**Alunos:**\
-• Daniel Moraes
+**Aluno e matrícula:**\
+• Daniel Moraes - 06014751
 
 ---
-**Como executar:**
+**Como executar:**\
+\
+Comandos no Terminal:
 ```
 pip install pandas
 python main.py
