@@ -9,9 +9,15 @@ Um projeto que consiste em um sistema em Python que cadastra, pesquisa, edita e 
 ---
 **Como executar:**\
 \
-Comandos no Terminal:
+Comandos no Terminal:\
+\
+• Dependências para rodar o código:
 ```
 pip install pandas
+```
+\
+• Comando para iniciar o código
+```
 python main.py
 ```
 ---
