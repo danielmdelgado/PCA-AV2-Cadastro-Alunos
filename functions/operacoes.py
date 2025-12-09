@@ -40,3 +40,58 @@ def inserir(df):
 
     return df
         
+def pesquisar(df):
+    """
+    Pesquisa o aluno por nome ou matrícula.
+    Após encontrar, permite editar ou remover.
+    Depois retorna o DataFrame atualizado.
+    """
+
+    print("\n=== PESQUISAR ALUNO ===")
+    print("1 - Pesquisar por matrícula")
+    print("2 - Pesquisar por nome")
+    opcao = input("Escolha: ")
+
+    if opcao == "1":
+        try:
+              mat = int(input("Digite a matrícula: "))
+        except:
+             print("Matrícula inválida")
+             return df
+        
+
+        resultado = df[df["matricula"] == mat]
+
+    elif opcao == "2":
+         nome = input("Digite o nome: ").strip().lower()
+         resultado = df[df["nome"].str.lower() == nome]
+    
+    else:
+         print("Opção inválida.")
+         return df
+    
+
+    # Se não houver resultado
+    if resultado.empty:
+         print("\nAluno não encontrado.")
+         return df
+    
+
+    #Mostra o aluno encontrado
+    aluno = resultado.iloc[0]
+    print("\n=== ALUNO ENCONTRADO ===")
+    print(aluno)
+
+
+    #Escolha pra fazer a ação
+    acao = input("\n(E) Editar | (R) Remover | (V) Voltar : ").strip().upper()
+
+    if acao == "E":
+         df = editar(df, aluno["matricula"])
+
+    
+    elif acao == "R":
+         df = editar(df, aluno["matricula"])
+
+
+    return df
