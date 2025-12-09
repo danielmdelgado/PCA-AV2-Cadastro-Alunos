@@ -95,3 +95,48 @@ def pesquisar(df):
 
 
     return df
+
+
+def editar(df, matricula):
+     """
+     Edita o campo selecionado de um aluno cadastrado
+     """
+
+     print("\n=== EDITAR ALUNO ===")
+
+     print("1 - Nome")
+     print("2 - Rua")
+     print("3 - Número")
+     print("4 - Bairro")
+     print("5 - Cidade")
+     print("6 - UF")
+     print("7 - Telefone")
+     print("8 - Email")
+
+     opcao = input("Escolha o campo que deseja editar: ")
+
+     campos = {
+        "1": "nome",
+        "2": "rua",
+        "3": "numero",
+        "4": "bairro",
+        "5": "cidade",
+        "6": "uf",
+        "7": "telefone",
+        "8": "email"
+     }
+
+
+     if opcao not in campos:
+          print("Opção inválida.")
+          return df
+     
+
+     campo = campos[opcao]
+     novo_valor = input(f"Digite o novo valor para {campo}: ")
+
+     df.loc[df["matricula"] == matricula, campo] = novo_valor
+
+     print("\nDado atrualizado com sucesso!")
+
+     return df
