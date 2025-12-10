@@ -140,3 +140,24 @@ def editar(df, matricula):
      print("\nDado atrualizado com sucesso!")
 
      return df
+
+
+def remover(df, matricula):
+     """
+     Remove o aluno pela matrícula, apos a confirmação.
+     """
+
+
+     print("\n=== REMOVER ALUNO ===")
+     confirma = input("Tem certeza que deseja remover? (S/N): ").strip().upper()
+
+     if confirma != "S":
+          print("Remoção cancelada.")
+          return df
+     
+     
+     df = df[df["matricula"] != matricula]
+
+     print("\nAluno removido com sucesso!")
+
+     return df
