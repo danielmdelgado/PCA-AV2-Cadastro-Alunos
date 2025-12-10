@@ -4,7 +4,7 @@ from functions.operacoes import inserir, pesquisar
 
 
 def main():
-    #Carregar o CSV no início do programa
+    # Carregar o CSV no início do programa
     df = carregar_csv()
 
     while True:
@@ -25,6 +25,6 @@ def main():
         else:
             print("\nOpção inválida. Tente novamente.")
 
+
 if __name__ == "__main__":
     main()
-            
