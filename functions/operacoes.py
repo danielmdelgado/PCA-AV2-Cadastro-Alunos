@@ -87,7 +87,7 @@ def pesquisar(df):
         df = editar(df, aluno["matricula"])
 
     elif acao == "R":
-        df = editar(df, aluno["matricula"])
+        df = remover(df, aluno["matricula"])
 
     return df
 
