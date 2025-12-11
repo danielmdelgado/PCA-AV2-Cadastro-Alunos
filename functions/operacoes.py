@@ -40,6 +40,8 @@ def inserir(df):
 
     return df
 
+# FUNÇÃO PARA PESQUISAR OS ALUNOS POR MATRÍCULA OU NOME
+
 
 def pesquisar(df):
     """
@@ -91,6 +93,8 @@ def pesquisar(df):
 
     return df
 
+# FUNÇÃO PARA EDITAR AS INFORMAÇÕES DO ALUNO ENCONTRADO
+
 
 def editar(df, matricula):
     """
@@ -133,6 +137,8 @@ def editar(df, matricula):
     print("\nDado atualizado com sucesso!")
 
     return df
+
+# FUNÇÃO PARA REMOVER UM ALUNO DO ARQUIVO CSV
 
 
 def remover(df, matricula):
