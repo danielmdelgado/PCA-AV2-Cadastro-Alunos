@@ -130,7 +130,7 @@ def editar(df, matricula):
 
     df.loc[df["matricula"] == matricula, campo] = novo_valor
 
-    print("\nDado atrualizado com sucesso!")
+    print("\nDado atualizado com sucesso!")
 
     return df
 
